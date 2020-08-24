@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 //pagina principal
 Route::get('/', function () {
-    return view('orcamentoindex');
+    return view('welcome');
 });
 
 //Rota Novos Usuarios
@@ -47,3 +47,9 @@ Route::get('/adicionareceita', function () {
    return view ('Control_Revenue@create'); 
 });
 
+//Route::get('/login', function () {
+  //  return view ('login');
+//});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
